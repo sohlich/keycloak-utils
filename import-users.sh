@@ -130,7 +130,7 @@ kc_set_pwd() {
   --data '{
     "type": "password",
     "value": "'"$password"'",
-    "temporary": "true"
+    "temporary": "false"
   }' "$base_url/admin/realms/$realm/users/$userid/reset-password")
   msg="$username: password set to $password"
   process_result "204" "$result" "$msg"
